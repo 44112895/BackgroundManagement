@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2c3e50;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.container {
+    padding: 0 1%;
+}
+
+label {
+    width: 60px;
+}
+
+#title {
+    width: 200px;
+    height: 35px;
+}
+
+.container>h3 {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 45%;
+    color: #ec3e27;
+}
+
+#preview {
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    width: 50%;
+    height: 80%;
+    border: 1px solid black;
+    overflow: auto;
+}

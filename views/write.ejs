@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+    <link rel="stylesheet" href="../public/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" href="../public/css/write.css">
+</head>
+<body>
+    <div class="container">
+        <label for="title">标题：</label><input type="text" id="title" placeholder="在此处输入博客的标题"><br/><br/>
+        <label for="content">内容：</label><textarea id="content" cols="60%" rows="30%" placeholder="博客内容"></textarea><br/>
+        <label for="author">作者：</label><input type="text" id="author" value=<%= user %> disabled><br/>
+        <label for="id">ID：</label><input type="text" id="id" disabled value=<%= id %>><br/>
+        <% if (id) { %>
+            <label>更新：</label><button id="update">更新</button>
+        <% } else { %>
+            <label>发布：</label><button id="add">发布</button>
+        <% } %>
+        <h3>预览：</h3>
+        <div id="preview"></div>
+    </div>
+</body>
+<script src="../public/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.bootcss.com/showdown/1.3.0/showdown.min.js"></script>
+<script src="../public/js/write.js"></script>
+</html>

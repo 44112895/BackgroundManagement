@@ -1,37 +1,43 @@
-# 后台管理系统
-
-#### 介绍
-用bootstrap、node、mongodb做一个简单的后台管理系统
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 使用说明
+* 1、http://localhost:8989/
+* 2、没登陆可以查询所有的博客，不能访问我的博客、新建博客、聊天室等、点赞、评论等功能
+* 3、登录或注册
+* 4、登录后
+    * 在首页显示的博客为去掉登录人的博客，能点赞
+    * 在我的博客显示的为只有自己的博客，能点赞、编辑和删除
+    * 点击博客链接，显示对应的博客详情
+    * 点击聊天室，打开新页面，进入聊天室，能实时聊天和听音乐
+* 5、分页组件
+    * 一般按照首次查询出的总数量进行页数显示，生成组件
+    * 点击分页的时候，查询对应的10条数据，重新渲染
+    * 有查询条件，判断查询的数据数量是否为10
+        * 如果为10，多增加一页分页
+        * 如果小于10，分页数为当前数据数量
+* 6、登录后，有session存储登录状态，7天免登录
+* 7、登陆后，可以退出登录，删除session，也可以注销账号，删除对应的账号
+## 文件结构
+* 1、db：数据库文件
+* 2、model：数据文件
+    * dao.js：数据库操作文件
+    * music.js：音乐列表文件
+* 3、node_modules：下载的模块
+* 4、public：公共资源
+    * css：css样式文件
+    * images：图片文件
+    * js：js文件
+    * music：音乐文件
+* 5、views：静态页面
+    * 404.ejs：错误页面
+    * chat.ejs：聊天室页面
+    * index.ejs：首页
+    * login.ejs：登录页面
+    * sign.ejs：注册页面
+    * tip.ejs：注册后的提示
+    * view.ejs：详情页
+    * write.ejs：新建博客页面
+* 6、app.js：项目后台
+* 7、package.json：下载模块时，写的依赖
+* 8、README.md：说明文件
+* 9、user.db：session存储文件
+## 扩展
+* 引入了markdown语法，在新建博客和编辑界面可以查看实时预览

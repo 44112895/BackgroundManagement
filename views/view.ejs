@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+    <link rel="stylesheet" href="../public/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" href="../public/css/view.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="id" data=<%= id %>></h1>
+        <b>作者：</b><span id="author"></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>日期：</b><span id="date"></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>访问量：</b><span id="view"></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>点赞数：</b><span id="like"></span>
+        <div id="content"></div>
+        <label for="input"><%= user %></label>：<input type="text" id="input" placeholder="请输入你的评论">&nbsp;&nbsp;<button id="addComment">发布</button>
+        <div id="comment"></div>
+    </div>
+</body>
+<script src="../public/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.bootcss.com/showdown/1.3.0/showdown.min.js"></script>
+<script src="../public/js/view.js"></script>
+</html>

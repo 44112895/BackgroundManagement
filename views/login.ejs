@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../public/css/loginAndSign.css">
+    <script src="../public/js/loginAndSign.js"></script>
+</head>
+<body>
+    <canvas class="canvas" width="1575" height="1337"></canvas>
+    <div class="login-main">
+        <div class="login-title">
+            <span>用户登录</span>
+        </div>
+        <div class="login-content">
+            <div class="login-user">
+                <div class="icon">
+                    <img src="../public/images/username.png" alt="">
+                </div>
+                <label for="userName"></label>
+                <input type="text" name="userName" id="userName" placeholder="用户名" autocomplete="off" value=""/>
+            </div>
+            <span id="name-tip"></span>
+            <div class="login-pwd">
+                <div class="icon">
+                    <img src="../public/images/password.png" alt="">
+                </div>
+                <label for="userPassword"></label>
+                <input type="password" name="userPassword" id="userPassword" placeholder="密码" autocomplete="off" value=""/>
+            </div>
+            <span id="password-tip"></span>
+            <div class="login-link">
+                <a href="http://localhost:8989/sign">还没有账号？现在注册</a>
+            </div>
+            <div class="login-btn">
+                <input type="button" value="登录"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../public/js/login.js"></script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天室</title>
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../public/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" href="../public/css/chat.css">
+</head>
+<body>
+    <div class="chat">
+        <h3>欢迎<span><%= user %></span>进入聊天室</h3>
+        <div class="msg"></div>
+        <label for="msg"></label><input type="text" id="msg" placeholder="请输入..."><button id="send" disabled>发送</button>
+    </div>
+    <div class="other">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>音乐列表</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < music.length; i++) { %>
+                    <tr>
+                        <td><%= music[i].name %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <button id="prev">上一首</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="play">播放</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="next">下一首</button>
+        <video src="../public/music/DJMuchY%20-%20Ke%20Cap%20Gap%20Ba%20Gia.flac">
+            您的浏览器不支持video元素，请升级或更换浏览器
+        </video>
+    </div>
+</body>
+<script src="socket.io/socket.io.js"></script>
+<script src="../public/js/chat.js"></script>
+</html>

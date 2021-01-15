@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2c3e50;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body>div {
+    width: 45%;
+    height: 90%;
+    border: 1px solid #7591ad;
+    background-color: #bdc581;
+    padding: 1%;
+}
+
+.chat h3 span {
+    color: #ec3e27;
+}
+
+.msg {
+    width: 100%;
+    height: 80%;
+    border: 1px solid #7591ad;
+    background-image: url("../../public/images/background.jpg");
+    background-size: cover;
+    background-position: 0 15%;
+    margin: 1% 0;
+    overflow: auto;
+}
+
+.msg>div {
+    height: 30px;
+    line-height: 30px;
+    vertical-align: center;
+    margin-top: 5px;
+}
+
+.msg>div>div {
+    min-width: fit-content;
+}
+
+.msg div[class='left'] {
+    float: left;
+    color: #0984e3;
+}
+
+.msg div[class='center left'] {
+    float: left;
+    background-color: #fdcb6e;
+}
+
+.msg div[class='center right'] {
+    float: right;
+    background-color: #00b894;
+}
+
+.msg div[class='right'] {
+    float: right;
+    color: #ec3e27;
+}
+
+#msg {
+    width: 58%;
+    height: 6%;
+    margin-right: 1%;
+}
+
+#send {
+    width: 20%;
+    height: 6.6%;
+}
+
+video {
+    position: fixed;
+    z-index: -1;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:not(.current):hover {
+    background-color: #f97f51;
+}
+
+.current {
+    background-color: #00b894;
+}
